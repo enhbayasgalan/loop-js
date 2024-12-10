@@ -287,3 +287,159 @@ for(i=1;i<=sentence.length;i++){
    }
 }
 console.log( ugs + " ug baina")
+
+// Exercise 24
+ 
+// Find Missing Number Write a loop to find the missing number in an array of integers from 1 to 10.
+ 
+// let arr = [1, 2, 3, 5, 6, 7, 8, 9, 10];
+// Example Output:
+// Missing number: 4
+function findMissingNumber(arr, n) {
+  let hashSet = new Set();
+
+  // Add all elements of array to hashset
+  for (let i = 0; i < n - 1; i++) {
+    hashSet.add(arr[i]);
+  }
+
+  // Check each integer from 1 to n
+  for (let i = 1; i <= n; i++) {
+    // If integer is not in hashset, it is the missing integer
+    if (!hashSet.has(i)) {
+      return i;
+    }
+  }
+
+  // If no integer is missing, return n+1
+  return n + 1;
+}
+
+let arr = [1, 2, 3, 5, 6, 7, 8, 9, 10];
+let n5 = arr.length;
+
+let missingNumber = findMissingNumber(arr, n);
+console.log("Missing number is: " + missingNumber);
+
+// Exercise 26
+ 
+// Create a Pyramid Pattern Write a loop to create the following pyramid pattern.
+// Example Output:
+// markdown
+// Copy code
+// *
+// **
+// ***
+// ****
+// *****
+
+
+// Exercise 26
+ 
+// Create a Pyramid Pattern Write a loop to create the following pyramid pattern.
+// Example Output:
+// markdown
+// Copy code
+// *
+// **
+// ***
+// ****
+// *****
+// Exercise 26
+ 
+// Create a Pyramid Pattern Write a loop to create the following pyramid pattern.
+// Example Output:
+// markdown
+// Copy code
+// *
+// **
+// ***
+// ****
+// *****
+
+let rows = 1
+for (i = 1; i <= rows; i++) {
+for (j = 1; j <= i; j++)
+    console.log("*")
+}
+
+// Exercise 27
+ 
+// Sum of Digits Write a loop to calculate the sum of the digits of a number.
+ 
+// let num = 12345;
+// Example Output:
+// Sum of digits: 15
+
+
+// Exercise 28
+ 
+// Remove Duplicates from an Array Write a loop to remove duplicate elements from an array.
+ 
+// let arr = [1, 2, 3, 2, 1, 4];
+// Example Output:
+// [1, 2, 3, 4]
+
+let arr2 = 1
+    
+    // To maintain the new size of the array
+    
+
+    for (let i = 0; i < arr2.length; i++) {
+        if (!s.has(arr[i])) {
+            s.add(arr[i]);
+            arr[idx++] = arr[i];
+        }
+    }
+
+
+
+
+
+const arr5 = [1, 2, 3, 2, 1, 4];
+
+
+console.log(arr.slice(" 1 2 3 4"));
+
+
+// Exercise 29
+ 
+// Find Second Largest Number Write a loop to find the second largest number in an array.
+ 
+// let arr = [4, 10, 9, 2, 7];
+// Example Output:
+// Second largest number: 9
+
+function getSecondLargest(arr) {
+  let n = arr.length;
+  arr.sort((a, b) => a - b);
+  for (let i = n - 2; i >= 0; i--) {
+      if (arr[i] !== arr[n - 1]) {
+          return arr[i];
+      }
+  }
+  return -1;
+}
+
+const ar = [4, 10, 9, 2, 7];
+console.log(getSecondLargest(arr));
+
+// Exercise 30
+ 
+// Sort an Array Write a loop to sort an array in ascending order without using built-in functions.
+ 
+// let arr = [5, 3, 8, 1, 4];
+// Example Output:
+// [1, 3, 4, 5, 8]
+
+var Arr = [5, 3, 8, 1, 4];
+
+for (var i = 1; i < Arr.length; i++)
+    for (var j = 0; j < i; j++)
+        if (Arr[i] < Arr[j]) {
+            var x = Arr[i];
+            Arr[i] = Arr[j];
+            Arr[j] = x;
+        }
+
+console.log(Arr);
